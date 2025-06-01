@@ -4,7 +4,7 @@ from pyglet.math import Vec3
 class Camera:
     def __init__(
         self,
-        position: Vec3 = Vec3(0.0, 0.0, -2.0),
+        position: Vec3 = Vec3(0.0, 0.0, -4.0),
         v_view: Vec3 = Vec3(0.0, 0.0, 1.0),
         v_up: Vec3 = Vec3(0.0, 1.0, 0.0),
         sx: float = 35,
