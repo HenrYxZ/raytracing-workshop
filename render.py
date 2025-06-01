@@ -1,6 +1,8 @@
 from camera import Camera
 import numpy as np
 from PIL import Image
+
+import raytracer
 from scene import Scene
 
 
@@ -15,7 +17,8 @@ def render(scene: Scene, camera: Camera) -> Image:
     # Compute the color for each pixel
     for j in range(HEIGHT):
         for i in range(WIDTH):
-            pass
-        pass
+            color = raytracer.compute_color(i, j, WIDTH, HEIGHT, scene, camera)
+            rgb_color = color * 255
+            arr[j, i] = rgb_color
     image = Image.fromarray(arr)
     return image
